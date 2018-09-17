@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - run:
+          name: release for docker hub
+          command: ./release.sh push
