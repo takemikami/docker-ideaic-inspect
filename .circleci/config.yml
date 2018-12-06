@@ -8,8 +8,8 @@ jobs:
       - run:
           name: install git
           command: |
-            apt-get update
-            apt-get upgrade
+            apt-get -y update
+            apt-get -y upgrade
             apt-get -y install git
             mkdir -p ~/.ssh
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
